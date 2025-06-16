@@ -1103,9 +1103,10 @@ footer {
 
 .product-card p {
   color: #666;
-  line-height: 1.8;
+  line-height: 1.7;
   font-size: 1rem;
-  text-align: left;
+  text-align: center !important;
+  white-space: pre-line;
 }
 
 .ceo-social {
@@ -1576,17 +1577,34 @@ footer {
 }
 
 .liquid-glass {
-  background: rgba(255, 255, 255, 0.12);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-radius: 20px;
-  border: 1px solid rgba(255,255,255,0.3);
+  background: linear-gradient(135deg, rgba(255,255,255,0.32) 0%, rgba(247,250,252,0.22) 100%);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18), 0 1.5px 0 rgba(255,255,255,0.25) inset;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 24px;
+  border: 1.5px solid rgba(255,255,255,0.45);
   transition: box-shadow 0.3s, border 0.3s;
+  color: #1a222a;
 }
 .liquid-glass:hover {
-  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.28);
-  border: 1.5px solid rgba(255,255,255,0.5);
+  box-shadow: 0 16px 48px 0 rgba(31, 38, 135, 0.28);
+  border: 2px solid rgba(255,255,255,0.65);
+}
+.liquid-glass h1,
+.liquid-glass h2,
+.liquid-glass h3,
+.liquid-glass h4,
+.liquid-glass h5,
+.liquid-glass h6 {
+  color: #1bb6b1 !important;
+  text-shadow: 0 1px 6px rgba(255,255,255,0.18);
+}
+.liquid-glass p,
+.liquid-glass li,
+.liquid-glass span,
+.liquid-glass label {
+  color: #222 !important;
+  text-shadow: 0 1px 6px rgba(255,255,255,0.13);
 }
 
 .vall-logo-btn {
