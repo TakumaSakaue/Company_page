@@ -16,11 +16,9 @@
 
   <!-- Hero Section -->
   <section class="hero">
+    <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1 class="hero-title">
-        <span class="company-name">Vall</span>
-        <span class="hero-subtitle">AIの力で、全ての事業課題を解決する</span>
-      </h1>
+      <span class="hero-subtitle">AIの力で、<br>全ての事業課題を解決する</span>
       <p class="hero-description">
         最先端のAI技術とデータサイエンスを駆使して、<br>
         革新的なソリューションの開発と提供を行っています
@@ -213,7 +211,7 @@
   </section>
 
   <!-- Contact Form Section -->
-  <section class="contact-section">
+  <section id="contact" class="contact-section">
     <div class="container">
       <div class="contact-wrapper">
         <h2 class="contact-title">Contact</h2>
@@ -298,6 +296,8 @@
     <small>&copy; 2025 Vall Inc. All rights reserved.</small>
   </footer>
 
+  <a href="#contact" class="contact-fab" aria-label="Contact">Contact</a>
+
   <script>
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -379,6 +379,18 @@
     document.querySelectorAll('.vision-card, .timeline-item, .business-card, .product-card, .client-solution-card').forEach(el => {
       observer.observe(el);
     });
+
+    // Contactボタンのスムーズスクロール
+    const contactFab = document.querySelector('.contact-fab');
+    if (contactFab) {
+      contactFab.addEventListener('click', function(e) {
+        e.preventDefault();
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    }
   </script>
 </body>
 </html> 
