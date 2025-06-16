@@ -167,10 +167,17 @@ body, html {
   position: relative;
   width: 100vw;
   min-height: 100vh;
-  background: url('HP_back.png') center center/cover no-repeat;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+}
+
+.hero-bg-video {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
 }
 
 .hero-overlay {
@@ -208,62 +215,72 @@ body, html {
 }
 
 .hero-subtitle {
-  font-size: 3rem;
+  font-size: 3.2rem;
   color: #111;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.03em;
   display: block;
   margin-top: 0.5rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18), 0 1px 0 rgba(0,0,0,0.12);
 }
 
 .hero-description {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: #666;
-  margin-bottom: 3rem;
-  opacity: 0.9;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #333;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18), 0 1px 0 rgba(0,0,0,0.12);
 }
 
 .hero-cta {
   display: flex;
   gap: 1.5rem;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
   flex-wrap: wrap;
+  margin-top: 2.5rem;
 }
 
 .cta-primary, .cta-secondary {
-  padding: 1rem 2rem;
-  border-radius: 50px;
+  padding: 0.8rem 2.2rem;
+  border-radius: 32px;
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 500;
   font-family: 'Noto Serif JP', 'Yu Mincho', serif;
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  letter-spacing: 0.02em;
+  box-shadow: none;
+  min-width: unset;
+  min-height: unset;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cta-primary {
-  background: linear-gradient(135deg, #1bb6b1, #aefcfb);
-  color: white;
-  box-shadow: 0 10px 30px rgba(27, 182, 177, 0.3);
+  background: linear-gradient(135deg, #5eead4 0%, #7dd3fc 100%);
+  color: #fff;
+  border: none;
 }
 
 .cta-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 40px rgba(27, 182, 177, 0.4);
+  background: linear-gradient(135deg, #2dd4bf 0%, #38bdf8 100%);
+  color: #fff;
+  box-shadow: 0 6px 24px rgba(27, 182, 177, 0.13);
 }
 
 .cta-secondary {
-  background: transparent;
-  color: #1bb6b1;
-  border: 2px solid #1bb6b1;
+  background: #fff;
+  color: #14b8a6;
+  border: 2px solid #14b8a6;
 }
 
 .cta-secondary:hover {
-  background: #1bb6b1;
-  color: white;
-  transform: translateY(-3px);
+  background: #e0f7fa;
+  color: #11998e;
+  box-shadow: 0 6px 24px rgba(27, 182, 177, 0.10);
 }
 
 /* Container */
@@ -1474,11 +1491,18 @@ footer {
 }
 
 .submit-container {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 2rem;
 }
 
 .elegant-submit-btn {
+  min-height: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(135deg, #1bb6b1, #aefcfb);
   color: white;
   padding: 1rem 3rem;
