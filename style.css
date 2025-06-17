@@ -14,7 +14,10 @@ body, html {
 
 .background-shapes {
   position: fixed;
-  top: 0; left: 0; width: 100vw; height: 100vh;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 120vh;
   z-index: 0;
   pointer-events: none;
   overflow: hidden;
@@ -1688,4 +1691,61 @@ h3 {
   opacity: 0;
   animation: fade-in 2.2s ease-out both;
   animation-timeline: fadeInTimeline;
+}
+
+/* News Section */
+.news-section {
+  max-width: 1000px;
+  margin: 80px auto;
+  background: linear-gradient(135deg, rgba(255,255,255,0.55) 0%, rgba(247,250,252,0.35) 100%);
+  border-radius: 24px;
+  box-shadow: 0 16px 48px 0 rgba(31, 38, 135, 0.18), 0 1.5px 0 rgba(255,255,255,0.25) inset;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1.5px solid rgba(255,255,255,0.35);
+  padding: 36px 3vw 96px 3vw;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.news-section .section-title {
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+.news-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 80px;
+}
+.news-coming-soon {
+  font-family: 'Noto Serif JP', 'Yu Mincho', serif;
+  font-size: 1.2rem;
+  color: #bbb;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-align: center;
+  display: block;
+  margin-top: 40px;
+}
+@media (max-width: 1100px) {
+  .news-section {
+    max-width: 98vw;
+    padding: 32px 2vw 80px 2vw;
+  }
+}
+@media (max-width: 700px) {
+  .news-section {
+    padding: 24px 2vw 48px 2vw;
+    max-width: 98vw;
+    border-radius: 16px;
+  }
+  .news-section .section-title {
+    font-size: 1.2rem;
+    margin-bottom: 18px;
+  }
+  .news-coming-soon {
+    font-size: 1rem;
+    margin-top: 24px;
+  }
 } 
